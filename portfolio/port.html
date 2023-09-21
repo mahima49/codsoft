@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+             <nav>
+                <img src="name.png" class="logo" >
+                <ul >
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+             </nav>
+             <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Mahima</span><br>Gupta From India.</h1>
+             </div>
+        </div>
+    </div>
+    <!-- about-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="on.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Welcome to my portfolio! I am a Computer Science student passionate about coding and designing.
+                        As a dedicated and motivated Computer Science student, I'm excited to share my academic journey and projects with you.
+                        I am currently pursuing MCA at Galgotias University.
+                        I have a strong academic background in computer Science.I have developed proficiency in HTML, CSS, JavaScript, c and python."
+                        My skill set includes communication, problem-solving and teamwork.
+                       </p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"  onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Designer</span><br>Designing Web/App interfaces</li>
+
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Calculator</span><br>A Calculator that can be used on web or android both.</li>
+                            <li><span>Tribute Page</span><br>A Tribute page for the living legend M.S.Dhoni.</li>
+                            <li><span>To-Do-List</span><br>A To DO List web application.</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>High School-2016</span><br>ST. Mary's School, CBSE board </li>
+                            <li><span>Senior Secondary School-2018</span><br>ST. Mary's School, CBSE board </li><li><span>Graduation(BSc with Computer Science)</span><br>DR. Bhimrao University </li>
+                        </ul>
+                       </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+         var tablinks = document.getElementsByClassName("tab-links");
+         var tabcontents = document.getElementsByClassName("tab-contents");
+         function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    
+        </script>
+    
+    
+  
+</body>
+</html>
